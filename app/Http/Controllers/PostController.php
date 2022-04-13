@@ -32,7 +32,7 @@ class PostController extends Controller
         $id = substr($uri, strrpos($uri, '/') +1); //uriの末尾を取得
        
         $categoryOrSource = explode('/', $uri); //uriを/で区切る
-        $categoryOrSource = $categoryOrSource[5]; //5番目の文字列でsourceかcategoryか判別
+        $categoryOrSource = $categoryOrSource[3]; //5番目の文字列でsourceかcategoryか判別
         $categoryOrSource_id = $categoryOrSource . "_id";
 
         $posts = Post::where($categoryOrSource_id, '=', $id)->orderBy("id", "desc")->paginate(7);
