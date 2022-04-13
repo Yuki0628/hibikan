@@ -1,0 +1,216 @@
+@import "../bootstrap/scss/bootstrap.scss";
+
+
+
+.form-control {
+  appearance: auto;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.main-container {
+  min-height: 100vh;
+}
+
+#main-section {
+
+  .mainWordContainer {
+    width: 80%;
+    border:5px double #D9D7F1;
+  }
+
+  .info_list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  *,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.0rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-border {
+  margin-bottom: 12px;
+  padding: 0;
+
+  -webkit-transition: all 0.3s;
+
+  transition: all 0.3s;
+
+  border-radius: 0;
+}
+
+a.btn-border span {
+  position: relative;
+
+  display: block;
+
+  padding: 1.25rem 3rem;
+
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+a.btn-border:before {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 14px;
+
+  content: "";
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+  border: 2px solid #000;
+  border-top: 1px solid #000;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-image: -webkit-repeating-linear-gradient(
+    135deg,
+    #000,
+    #000 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #000,
+    #000 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  background-size: 7px 7px;
+
+  -webkit-backface-visibility: hidden;
+
+  backface-visibility: hidden;
+}
+
+a.btn-border:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+}
+
+a.btn-border:hover:before {
+  bottom: -5px;
+}
+
+a.btn-border:active {
+  -webkit-transform: translate(0, 7px);
+  transform: translate(0, 7px);
+}
+
+a.btn-border:active:before {
+  bottom: -1px;
+}
+
+
+
+}
+
+#categories {
+
+  .genre {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    & > p > a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .genre1 {
+    background-color: #FFFDDE;
+  }
+  .genre2 {
+    background-color: #FFCBCB;
+  }
+  .genre3 {
+    background-color: #E7FBBE;
+  }
+  .genre4 {
+    background-color: #D9D7F1;
+  }
+
+  .source > .container > .list-group > li {
+    list-style: none;
+  }
+
+}
+
+//カテゴリー別ページ
+
+
+//個別投稿ページ
+#single-section {
+  .textContainer {
+    background-color: rgb(247, 237, 219);
+  }
+}
+
+//フラッシュメッセージ
+.flash_msg {
+  animation: fadeOut;
+  animation-delay: 3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  left: 15%;
+  width: 60%;
+  opacity: 0.8;
+
+  & > p {
+    opacity: 1.0;
+    margin: 0 auto;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
