@@ -27,7 +27,6 @@ class PostController extends Controller
 
     public function category() {
 
-        $user = User::get();
         $uri = url()->current();
         $id = substr($uri, strrpos($uri, '/') +1); //uriの末尾を取得
        
@@ -42,7 +41,6 @@ class PostController extends Controller
 
         return view('category')->with('posts', $posts)
                                ->with('id', $id)
-                               ->with('user', $user)
                                ->with('category_lists', $category_lists)
                                ->with('source_lists', $source_lists)
                                ->with('categoryOrSource', $categoryOrSource);
@@ -73,7 +71,7 @@ class PostController extends Controller
             return view('create');
         }else {
             return redirect('login')->with([
-                'flash_msg' => '投稿するにはログインしてください。',
+                'flash_msg' => '投稿にはログインが必要です。',
                 'color' => 'danger'
             ]);
         }

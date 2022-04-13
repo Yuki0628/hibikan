@@ -19,4 +19,9 @@ class Post extends Model
         'category_id',
         'source_id',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

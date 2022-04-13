@@ -58,8 +58,8 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('パスワードをお忘れですか?') }}
+                                    <a class="btn btn-link" href="{{ route('register') }}">
+                                        {{ __('会員登録はコチラ') }}
                                     </a>
                                 @endif
                             </div>

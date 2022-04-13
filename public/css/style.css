@@ -11031,6 +11031,7 @@ textarea.form-control-lg {
   left: 15%;
   width: 60%;
   opacity: 0.8;
+  z-index: 1;
 }
 .flash_msg > p {
   opacity: 1;

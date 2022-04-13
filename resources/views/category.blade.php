@@ -22,22 +22,24 @@
 
 <div class="container my-5">
   <ul class="p-0">
-    @foreach($posts as $post)
-    <li class="card mb-4">
+@foreach($posts as $post)
+  <li class="card mb-4">
     <div class="card-header d-flex justify-content-between p-2">
       <h3 class="my-auto">No.{{$post->id}}</h3>
-      <p class="my-auto">Posted by {{ $user[$post->user_id]->name }}</p>
+
+      <p class="my-auto">Posted by {{ $post->user->name }}</p>
+
     </div>
-      <div class="card-body">
-        <h5 class="card-title">{{$post->title_kor}}</h5>
-        <p class="card-text">{{$post->title_ja}}</p>
-        <div class="d-flex justify-content-between">
-          <a href="{{ route('post', ['id'=>$post->id]) }}" class="btn btn-primary">解説を見る</a>
-          <p class="text-muted my-auto">{{ $post->created_at->format('Y.m.d') }}</p>
-        </div>
+    <div class="card-body">
+      <h5 class="card-title">{{$post->title_kor}}</h5>
+      <p class="card-text">{{$post->title_ja}}</p>
+      <div class="d-flex justify-content-between">
+        <a href="{{ route('post', ['id'=>$post->id]) }}" class="btn btn-primary">解説を見る</a>
+        <p class="text-muted my-auto">{{ $post->created_at->format('Y.m.d') }}</p>
       </div>
-    </li>
-    @endforeach
+    </div>
+  </li>
+@endforeach
 
 
   {{ $posts->links() }}

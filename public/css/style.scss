@@ -197,6 +197,7 @@ a.btn-border:active:before {
   left: 15%;
   width: 60%;
   opacity: 0.8;
+  z-index: 1;
 
   & > p {
     opacity: 1.0;
