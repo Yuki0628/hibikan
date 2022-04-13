@@ -26,7 +26,7 @@
     <li class="card mb-4">
     <div class="card-header d-flex justify-content-between p-2">
       <h3 class="my-auto">No.{{$post->id}}</h3>
-      <p class="my-auto">Posted by {{ $user[$post->user_id -1]->name }}</p>
+      <p class="my-auto">Posted by {{ $user[$post->user_id]->name }}</p>
     </div>
       <div class="card-body">
         <h5 class="card-title">{{$post->title_kor}}</h5>
