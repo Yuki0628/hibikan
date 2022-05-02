@@ -151,11 +151,8 @@ a.btn-border:active:before {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-
-    & > p > a {
-      text-decoration: none;
-      color: black;
-    }
+    text-decoration: none;
+    color: black;
   }
 
   .genre1 {

@@ -35,11 +35,14 @@
                     <h5 class="card-title">{{$post->title_kor}}</h5>
                     <p class="card-text">{{$post->title_ja}}</p>
                     <div class="d-flex justify-content-between">
-                    <div>
-                        <a href="{{ route('edit', ['id'=>$post->id]) }}" class="btn btn-primary">編集</a>
-                        <a href="{{ route('edit', ['id'=>$post->id]) }}" class="btn btn-danger">削除</a>
-                    </div>
-                    <p class="text-muted">{{ $post->created_at->format('Y.m.d') }}</p>
+                        <div class="d-flex">
+                            <a href="{{ route('edit', ['id'=>$post->id]) }}" class="btn btn-primary">編集</a>
+                            <form action="{{ route('delete', ['id'=>$post->id]) }}" method="POST">
+                            @csrf
+                                <input type="submit" class="btn btn-danger btn-dell" value="削除">
+                            </form>
+                        </div>
+                        <p class="text-muted">{{ $post->created_at->format('Y.m.d') }}</p>
                     </div>
                 </div>
                 </li>

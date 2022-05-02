@@ -92,7 +92,7 @@
             @yield('content')
         </main>
 
-        <footer class="footer bg-secondary py-0 mt-4">
+        <footer class="footer bg-secondary py-0 mt-5">
             <div>
                 <p class="my-0 p-3 text-center link-light"><a class="link-light" href="https://kankoku-trendshop.com/">©韓国トレンドSHOP</a>　All Right Reserved</p>
             </div>

@@ -23,12 +23,12 @@
     <h2 class="my-5 mx-3 h4">ジャンルから探す</h2>
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col col-6 genre genre1 py-3"><p><a href="{{ route('category', ['id'=>'1']) }}">元気づける名言</a></p></div>
-        <div class="col col-6 genre genre2 py-3"><p><a href="{{ route('category', ['id'=>'2']) }}">愛情表現</a></p></div>
+        <a class="col col-6 genre genre1 py-3" href="{{ route('category', ['id'=>'1']) }}">元気づける名言</a>
+        <a class="col col-6 genre genre2 py-3" href="{{ route('category', ['id'=>'2']) }}">愛情表現</a>
       </div>
       <div class="row justify-content-center text-center">
-        <div class="col col-6 genre genre3 py-3"><p><a href="{{ route('category', ['id'=>'3']) }}">人生の教訓</a></p></div>
-        <div class="col col-6 genre genre4 py-3"><p><a href="{{ route('category', ['id'=>'4']) }}">面白い言葉</a></p></div>
+        <a class="col col-6 genre genre3 py-3" href="{{ route('category', ['id'=>'3']) }}">人生の教訓</a>
+        <a class="col col-6 genre genre4 py-3" href="{{ route('category', ['id'=>'4']) }}">面白い言葉</a>
       </div>
     </div>
   </div>

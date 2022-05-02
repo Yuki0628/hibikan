@@ -85,16 +85,12 @@ class PostController extends Controller
 
         if(!isset($post)) {
             return redirect('/')->with([
-                'flash_msg' => '投稿が存在しません。',
+                'flash_msg' => '不正なアクセスです。',
                 'color' => 'danger'
             ]);
         }
 
-
-
-
         if(isset($user->id)) { //ログインしているかの判定
-
 
             if($post->user_id === $user->id) { //ユーザーIDが一致するかの判定
                 return view('edit')->with('post', $post);
@@ -189,5 +185,14 @@ class PostController extends Controller
             'color' => 'success'
         ]);
 
+    }
+
+    public function delete(Request $request) {
+        $target = Post::find($request->id);
+        $target->delete();
+        return redirect('/')->with([
+            'flash_msg' => '投稿の削除が完了しました。',
+            'color' => 'success'
+        ]);
     }
 }

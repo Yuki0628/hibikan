@@ -47,3 +47,6 @@ Route::post('/store', [PostController::class, 'store'])->name('store');
 Route::get('/edit/{id}', [PostController::class, 'edit'])->name('edit');
 //更新
 Route::post('/update', [PostController::class, 'update'])->name('update');
+
+//削除機能
+Route::post('/delete/{id}', [PostController::class, 'delete'])->name('delete');
