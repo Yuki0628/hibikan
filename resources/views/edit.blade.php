@@ -35,22 +35,22 @@
       <label>ジャンル</label>
       <select name="category_id" class="form-control">
         <option value="" selected>ジャンルを選択</option>
-        <option value="1" @if(old('category_id')=="1") selected @endif >元気づける名言</option>
-        <option value="2" @if(old('category_id')=="2") selected @endif >愛情表現</option>
-        <option value="3" @if(old('category_id')=="3") selected @endif >人生の教訓</option>
-        <option value="4" @if(old('category_id')=="4") selected @endif >おもしろい言葉</option>
+        <option value="1" @if(old('category_id')=="1") @elseif($post->category_id == 1) selected @endif >元気づける名言</option>
+        <option value="2" @if(old('category_id')=="2") @elseif($post->category_id == 2) selected @endif >愛情表現</option>
+        <option value="3" @if(old('category_id')=="3") @elseif($post->category_id == 3) selected @endif >人生の教訓</option>
+        <option value="4" @if(old('category_id')=="4") @elseif($post->category_id == 4) selected @endif >おもしろい言葉</option>
       </select>
     </div>
     <div class="form-group mb-2">
       <label>出典</label>
       <select name="source_id" class="form-control">
         <option value="" selected>出典を選択</option>
-        <option value="1" @if(old('source_id')=="1") selected @endif >アイドルの言葉</option>
-        <option value="2" @if(old('source_id')=="2") selected @endif >オリジナル</option>
-        <option value="3" @if(old('source_id')=="3") selected @endif >ことわざ</option>
-        <option value="4" @if(old('source_id')=="4") selected @endif >歌詞</option>
-        <option value="5" @if(old('source_id')=="5") selected @endif >書籍</option>
-        <option value="6" @if(old('source_id')=="6") selected @endif >その他</option>
+        <option value="1" @if(old('source_id')=="1") @elseif($post->source_id == 1) selected @endif >アイドルの言葉</option>
+        <option value="2" @if(old('source_id')=="2") @elseif($post->source_id == 2) selected @endif >オリジナル</option>
+        <option value="3" @if(old('source_id')=="3") @elseif($post->source_id == 3) selected @endif >ことわざ</option>
+        <option value="4" @if(old('source_id')=="4") @elseif($post->source_id == 4) selected @endif >歌詞</option>
+        <option value="5" @if(old('source_id')=="5") @elseif($post->source_id == 5) selected @endif >書籍</option>
+        <option value="6" @if(old('source_id')=="6") @elseif($post->source_id == 6) selected @endif >その他</option>
       </select>
     </div>
     

@@ -117,7 +117,7 @@ class PostController extends Controller
 
 
         $request->validate([
-            'title_kor' => 'required|string|max:30',
+            'title_kor' => 'required|string|max:100',
             'title_ja' => 'required|string|max:100',
             'explanation' => 'required',
             'category_id' => 'required',
@@ -153,13 +153,8 @@ class PostController extends Controller
 
         $input = $request->only('title_kor','title_ja',$explanation,'category_id','source_id');
 
-
-
-
-
-        
         $validator = $request->validate([
-            'title_kor' => 'required|string|max:30',
+            'title_kor' => 'required|string|max:100',
             'title_ja' => 'required|string|max:100',
             'explanation' => 'required',
             'category_id' => 'required',

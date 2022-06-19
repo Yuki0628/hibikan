@@ -10891,6 +10891,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: #383838;
+}
+
 .form-control {
   -webkit-appearance: auto;
      -moz-appearance: auto;

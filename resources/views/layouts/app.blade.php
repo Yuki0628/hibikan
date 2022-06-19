@@ -3,6 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="{{ url()->current() }}" />
+    @if (request()->route()->getName() === 'post')
+        <meta name="description" content="{{ $post->title_kor }}">
+    @endif
+
+    <!-- OGP情報 -->
+    <meta property="og:title" content="心に響く韓国語の名言集"/>
+    <meta property="og:description" content="あなたが好きな韓国語の名言を教えてください"/>
+    <meta property="og:site_name" content="心に響く韓国語の名言集"/>
+    <meta property="og:url" content="https://lang.korip.net/"/>
+    <meta property="og:image" content="asset('/favicon.ico')"/>
+    <!-- Twitterシェア時の表示形式指定 -->
+    <meta name="twitter:card" content="summary_large_image"/>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -15,9 +28,11 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
 
 </head>
 <body>
