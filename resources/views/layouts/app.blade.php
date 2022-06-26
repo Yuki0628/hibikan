@@ -7,10 +7,17 @@
     @if (request()->route()->getName() === 'post')
         <meta name="description" content="{{ $post->title_kor }}">
     @endif
-
+    <meta name="google-site-verification" content="idIERn8upJTkVdm5dkBlkIcaXvh5Zypsobn1E5q2mp0" />
     <!-- OGP情報 -->
-    <meta property="og:title" content="心に響く韓国語の名言集"/>
-    <meta property="og:description" content="あなたが好きな韓国語の名言を教えてください"/>
+
+    @if (request()->route()->getName() === 'post')
+        <meta property="og:title" content="{{ $post->title_kor }}"/>
+        <meta property="og:description" content="この言葉の意味を今すぐチェックしよう！"/>
+    @else
+        <meta property="og:title" content="心に響く韓国語の名言集"/>
+        <meta property="og:description" content="あなたが好きな韓国語の名言を教えてください"/>
+    @endif
+
     <meta property="og:site_name" content="心に響く韓国語の名言集"/>
     <meta property="og:url" content="https://lang.korip.net/"/>
     <meta property="og:image" content="asset('/favicon.ico')"/>
